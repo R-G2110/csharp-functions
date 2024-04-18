@@ -22,6 +22,7 @@
                         StampaVirgolaESpazio();
                 }
                 Console.Write(")");
+                Console.WriteLine();
             }
 
             //Funzione che eleva al quadrato un numero
@@ -41,8 +42,17 @@
                 return newArray;
             }
 
+            //Funzione che somma gli elementi dell'array
+            int SommaElementiArray(int[] array)
+            {
+                int sum = 0;
+                for (int i = 0; i < array.Length; i++)
+                {
+                    sum += array[i];
+                }
+                return sum;
+            }
 
-            //
 
             //Dati di prova
             int[] arrayNumeri = { 2, 6, 7, 5, 3, 9 };
@@ -55,6 +65,11 @@
             Console.WriteLine("Array con elementi elevati al quadrato:");
             int[] arrQuadrato = ElevaArrayAlQuadrato(arrayNumeri);
             StampaArray(arrQuadrato);
+
+            // Calcola la somma di tutti i numeri nell'array
+            Console.WriteLine("Somma dei numeri dell'array:");
+            int sum = SommaElementiArray(arrayNumeri);
+            Console.WriteLine($"La somma totale è {sum}");
         }
     }
 }
