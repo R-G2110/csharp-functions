@@ -23,7 +23,7 @@ namespace csharp_functions
                     if (i < array.Length - 1)
                         StampaVirgolaESpazio();
                 }
-                Console.Write(")");
+                Console.WriteLine(")");
             }
 
             //Funzione che eleva al quadrato un numero
@@ -78,25 +78,26 @@ namespace csharp_functions
 
 
             // Stampa l'array di numeri
-            Console.WriteLine("\nStampa dell'array originale:");
+            Console.WriteLine("Stampa dell'array originale:");
             StampaArray(arrayNumeri);
             Console.WriteLine();
 
             // Stampa l'array dove ogni numero è stato elevato al quadrato
-            Console.WriteLine("\nArray con elementi elevati al quadrato:");
+            Console.WriteLine("Array con elementi elevati al quadrato:");
             int[] arrQuadrato = ElevaArrayAlQuadrato(arrayNumeri);
             StampaArray(arrQuadrato);
+            StampaArray(arrayNumeri);
             Console.WriteLine();
 
             // Calcola la somma di tutti i numeri nell'array
-            Console.WriteLine("\nSomma dei numeri dell'array:");
             int sum = SommaElementiArray(arrayNumeri);
-            Console.WriteLine($"La somma totale è {sum}");
+            Console.WriteLine($"Somma totale degli elementi nell'array è {sum}");
+            Console.WriteLine();
 
             // Calcola la somma di tutti i numeri elevati al quadrato
-            Console.WriteLine("\nSomma dei numeri elevati al quadrato:");
             int sumQuadrato = SommaElementiArray(arrQuadrato);
-            Console.WriteLine($"La somma totale è {sumQuadrato}");
+            Console.WriteLine($"La somma totale al quadrato degli nell'array è {sumQuadrato}");
+            Console.WriteLine();
         }
     }
 }
